@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <style>
+    :root { --c1:#00c6ff; --c2:#0072ff; }
+    *{box-sizing:border-box} body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;
+      min-height:100dvh; display:grid; place-items:center;
+      background:linear-gradient(135deg,var(--c1),var(--c2));
+      color:#fff;
+    }
+    .card{
+      width:min(900px,92vw); background:rgba(255,255,255,0.08);
+      backdrop-filter: blur(8px); border:1px solid rgba(255,255,255,0.2);
+      border-radius:24px; padding:32px; box-shadow:0 10px 30px rgba(0,0,0,.2)
+    }
+    h1{margin:0 0 8px; font-size:2.2rem}
+    p{margin:0 0 16px; opacity:.95}
+    .grid{display:grid; gap:14px}
+    @media (min-width:700px){ .grid{grid-template-columns:1fr 1fr} }
+    .tile{background:rgba(0,0,0,.15); border-radius:16px; padding:16px}
+    a.btn{
+      display:inline-block; margin-top:14px; padding:10px 16px; border-radius:12px;
+      background:#fff; color:#0a2540; text-decoration:none; font-weight:600
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Your Name</h1>
+    <p>Student • Developer • Tech Enthusiast</p>
+
+    <div class="grid">
+      <section class="tile">
+        <h3>Projects</h3>
+        <ul>
+          <li><strong>Project A</strong> — short description & link</li>
+          <li><strong>Project B</strong> — short description & link</li>
+        </ul>
+      </section>
+      <section class="tile">
+        <h3>Skills</h3>
+        <p>HTML, CSS, JS, Java, AWS (EC2), Git…</p>
+      </section>
+      <section class="tile">
+        <h3>Resume</h3>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </section>
+      <section class="tile">
+        <h3>Contact</h3>
+        <p>you@example.com · LinkedIn · GitHub</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
